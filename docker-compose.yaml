@@ -1,0 +1,15 @@
+version: "3.3"
+
+services:
+  pig:
+    build: .
+    ports:
+      - "8000:8000"
+
+  redis:
+    image: redis:latest
+
+  postgres:
+    image: postgres:11
+    environment:
+      POSTGRES_PASSWORD: P@ssw0rd
