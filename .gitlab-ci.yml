@@ -1,0 +1,7 @@
+image: docker
+services:
+  - docker:dind 
+
+build:
+  script:
+    - docker build . -t pig
