@@ -2,7 +2,8 @@ version: "3.3"
 
 services:
   pig:
-    build: .
+    image: pig
+    container_name: 'pig'
     ports:
       - "8000:8000"
 
