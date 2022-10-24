@@ -1,7 +1,19 @@
+stages:
+  - build
+  - deploy
+
 image: docker
 services:
   - docker:dind 
 
 build:
+  stage: build
   script:
     - docker build . -t pig
+    - docker images
+
+deploy:
+  stage: deploy
+  script:
+    - docker-compose up -d
+    - docker ps
